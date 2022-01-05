@@ -3,7 +3,9 @@ name: mygfwlist
 on: 
   push:
     branches: 
-      - master
+      - main
+    paths:
+      - 'add.ini'
 
 
 jobs:
