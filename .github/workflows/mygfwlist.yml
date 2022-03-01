@@ -1,6 +1,7 @@
 name: mygfwlist
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "19 21 * * *"
   push:
