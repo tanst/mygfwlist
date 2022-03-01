@@ -1,6 +1,8 @@
 name: mygfwlist
 
-on: 
+on:
+  schedule:
+    - cron: "19 21 * * *"
   push:
     branches: 
       - main
@@ -24,8 +26,7 @@ jobs:
             git config --global user.email t@tanst.net
             git config --global user.name tanst
             git add .
-            git commit -m "update mygfwlist" -a
-
+            git commit -m "$(date "+%Y%m%d%H%M%S")" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
