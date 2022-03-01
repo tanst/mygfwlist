@@ -27,7 +27,7 @@ jobs:
             git config --global user.email t@tanst.net
             git config --global user.name tanst
             git add .
-            git commit -m "$(date "+%Y%m%d%H%M%S")" -a
+            git commit -m "$(TZ=UTC-8 date "+%Y%m%d%H%M%S")" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
