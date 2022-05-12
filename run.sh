@@ -1,6 +1,6 @@
 #/bin/sh
 cd "$(dirname "$0")"
-gfwb64=$(curl -s -k https://raw.githubusercontent.com/Loukky/gfwlist-by-loukky/master/gfwlist.txt)
+gfwb64=$(curl -s -k https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/gfwlist.txt)
 add=$(curl -s -k https://raw.githubusercontent.com/tanst/mygfwlist/master/add.ini | sed 's/^/||/g')
 del=$(curl -s -k https://raw.githubusercontent.com/tanst/mygfwlist/master/del.ini | sed 's/^/||/g')
 gfwd64=$(echo "${gfwb64}" | base64 -d)
